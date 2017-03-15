@@ -1,0 +1,13 @@
+#!/bin/bash
+
+stripped_flags=
+
+for flag in $@; do
+    case ${flag} in
+    --sysroot=*) continue;;
+    esac
+
+    stripped_flags+="${flag} "
+done
+
+g++ ${stripped_flags}

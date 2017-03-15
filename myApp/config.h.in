@@ -1,0 +1,19 @@
+//
+// Configuration header input processed by CMake
+//
+
+#include <iostream>
+
+#cmakedefine01 BAR
+
+const std::string projectName {"@PROJECT_NAME@"};
+const unsigned int majorVersion {@myApp_VERSION_MAJOR@};
+const unsigned int minorVersion {@myApp_VERSION_MINOR@};
+
+void printDetails()
+{
+    std::cout << "PROJECT_NAME:  " << projectName << std::endl;
+    std::cout << "VERSION_MAJOR: " << majorVersion << std::endl;
+    std::cout << "VERSION_MINOR: " << minorVersion << std::endl;
+    std::cout << "BAR:           " << BAR << std::endl;
+}
